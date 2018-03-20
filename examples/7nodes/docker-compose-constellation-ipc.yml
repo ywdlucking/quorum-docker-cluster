@@ -1,0 +1,55 @@
+version: "3"
+services:
+  con1:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9001:9000"
+    volumes: 
+      - ./qdata/dd1/constellation:/etc/constellation
+  con2:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9002:9000"
+    volumes: 
+      - ./qdata/dd2/constellation:/etc/constellation
+  con3:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9003:9000"
+    volumes: 
+      - ./qdata/dd3/constellation:/etc/constellation
+  con4:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9004:9000"
+    volumes: 
+      - ./qdata/dd4/constellation:/etc/constellation
+  con5:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9005:9000"
+    volumes: 
+      - ./qdata/dd5/constellation:/etc/constellation
+  con6:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9006:9000"
+    volumes: 
+      - ./qdata/dd6/constellation:/etc/constellation
+  con7:
+    image: constellation:0.2.0
+    ipc: host
+    ports:
+      - "9007:9000"
+    volumes: 
+      - ./qdata/dd7/constellation:/etc/constellation      
+networks:
+  default:
+    external:
+      name: quorum-network

@@ -1,0 +1,104 @@
+version: "3"
+services:
+  con1:
+    image: constellation:0.2.0
+    ports:
+      - "9001:9000"
+    volumes: 
+      - ./qdata/dd1/constellation:/etc/constellation
+  con2:
+    image: constellation:0.2.0
+    ports:
+      - "9002:9000"
+    volumes: 
+      - ./qdata/dd2/constellation:/etc/constellation
+  con3:
+    image: constellation:0.2.0
+    ports:
+      - "9003:9000"
+    volumes: 
+      - ./qdata/dd3/constellation:/etc/constellation
+  con4:
+    image: constellation:0.2.0
+    ports:
+      - "9004:9000"
+    volumes: 
+      - ./qdata/dd4/constellation:/etc/constellation
+  con5:
+    image: constellation:0.2.0
+    ports:
+      - "9005:9000"
+    volumes: 
+      - ./qdata/dd5/constellation:/etc/constellation
+  con6:
+    image: constellation:0.2.0
+    ports:
+      - "9006:9000"
+    volumes: 
+      - ./qdata/dd6/constellation:/etc/constellation
+  con7:
+    image: constellation:0.2.0
+    ports:
+      - "9007:9000"
+    volumes: 
+      - ./qdata/dd7/constellation:/etc/constellation  
+  quorum-node1:
+    image: quorum:2.0.0
+    ports:
+      - "11070:8070"
+      - "11080:8080"
+      - "11090:8090"
+    volumes:
+      - ./qdata/dd1/quorum-node:/etc/quorum
+  quorum-node2:
+    image: quorum:2.0.0
+    ports:
+      - "12070:8070"
+      - "12080:8080"
+      - "12090:8090"
+    volumes:
+      - ./qdata/dd2/quorum-node:/etc/quorum
+  quorum-node3:
+    image: quorum:2.0.0
+    ports:
+      - "13070:8070"
+      - "13080:8080"
+      - "13090:8090"
+    volumes:
+      - ./qdata/dd3/quorum-node:/etc/quorum
+  quorum-node4:
+    image: quorum:2.0.0
+    ports:
+      - "14070:8070"
+      - "14080:8080"
+      - "14090:8090"
+    volumes:
+      - ./qdata/dd4/quorum-node:/etc/quorum
+  quorum-node5:
+    image: quorum:2.0.0
+    ports:
+      - "15070:8070"
+      - "15080:8080"
+      - "15090:8090"
+    volumes:
+      - ./qdata/dd5/quorum-node:/etc/quorum
+  quorum-node6:
+    image: quorum:2.0.0
+    ports:
+      - "16070:8070"
+      - "16080:8080"
+      - "16090:8090"
+    volumes:
+      - ./qdata/dd6/quorum-node:/etc/quorum
+  quorum-node7:
+    image: quorum:2.0.0
+    ports:
+      - "17070:8070"
+      - "17080:8080"
+      - "17090:8090"
+    volumes:
+      - ./qdata/dd7/quorum-node:/etc/quorum      
+networks:
+  default:
+    external:
+      name: quorum-network

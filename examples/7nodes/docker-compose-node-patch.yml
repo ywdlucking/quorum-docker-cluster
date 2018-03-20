@@ -1,0 +1,70 @@
+version: "3"
+services:
+  quorum-node1:
+    image: quorum:2.0.0-patch
+    command: geth --unlock 0 --password /etc/quorum/passwords.txt
+    ports:
+      - "11070:8070"
+      - "11080:8080"
+      - "11090:8090"
+    volumes:
+      - ./qdata/dd1/quorum-node:/etc/quorum
+      - ./qdata/dd1/constellation:/etc/constellation
+  quorum-node2:
+    image: quorum:2.0.0-patch
+    ports:
+      - "12070:8070"
+      - "12080:8080"
+      - "12090:8090"
+    volumes:
+      - ./qdata/dd2/quorum-node:/etc/quorum
+      - ./qdata/dd2/constellation:/etc/constellation
+  quorum-node3:
+    image: quorum:2.0.0-patch
+    ports:
+      - "13070:8070"
+      - "13080:8080"
+      - "13090:8090"
+    volumes:
+      - ./qdata/dd3/quorum-node:/etc/quorum
+      - ./qdata/dd3/constellation:/etc/constellation
+  quorum-node4:
+    image: quorum:2.0.0-patch
+    ports:
+      - "14070:8070"
+      - "14080:8080"
+      - "14090:8090"
+    volumes:
+      - ./qdata/dd4/quorum-node:/etc/quorum
+      - ./qdata/dd4/constellation:/etc/constellation
+  quorum-node5:
+    image: quorum:2.0.0-patch
+    ports:
+      - "15070:8070"
+      - "15080:8080"
+      - "15090:8090"
+    volumes:
+      - ./qdata/dd5/quorum-node:/etc/quorum
+      - ./qdata/dd5/constellation:/etc/constellation
+  quorum-node6:
+    image: quorum:2.0.0-patch
+    ports:
+      - "16070:8070"
+      - "16080:8080"
+      - "16090:8090"
+    volumes:
+      - ./qdata/dd6/quorum-node:/etc/quorum
+      - ./qdata/dd6/constellation:/etc/constellation
+  quorum-node7:
+    image: quorum:2.0.0-patch
+    ports:
+      - "17070:8070"
+      - "17080:8080"
+      - "17090:8090"
+    volumes:
+      - ./qdata/dd7/quorum-node:/etc/quorum      
+      - ./qdata/dd7/constellation:/etc/constellation
+networks:
+  default:
+    external:
+      name: quorum-network

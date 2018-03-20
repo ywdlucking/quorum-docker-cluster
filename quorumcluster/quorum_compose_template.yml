@@ -1,0 +1,14 @@
+  #QuorumName#:
+    image: quorum:2.0.0
+    container_name: #QuorumName#
+    ports:
+      - "#QuorumRaftPort#:8070"
+      - "#QuorumRpcPort#:8080"
+      - "#QuorumPort#:8090"
+    environment:
+      - PRIVATE_CONFIG=/etc/constellation/#ConstellationName#.conf
+    volumes:
+      - ./#NodeName#/quorum:/etc/quorum
+      - ./#NodeName#/constellation:/etc/constellation
+
+

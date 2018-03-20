@@ -1,0 +1,7 @@
+  #ConstellationName#:
+    image: constellation:0.2.0
+    container_name: #ConstellationName#
+    ports:
+      - "#ConstellationPort#:9000"
+    volumes: 
+      - ./#NodeName#/constellation:/etc/constellation
