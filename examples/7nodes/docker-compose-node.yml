@@ -8,7 +8,7 @@ services:
       - "11070:8070"
       - "11080:8080"
       - "11090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd1/quorum-node:/etc/quorum
@@ -20,7 +20,7 @@ services:
       - "12070:8070"
       - "12080:8080"
       - "12090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd2/quorum-node:/etc/quorum
@@ -32,7 +32,7 @@ services:
       - "13070:8070"
       - "13080:8080"
       - "13090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd3/quorum-node:/etc/quorum
@@ -44,7 +44,7 @@ services:
       - "14070:8070"
       - "14080:8080"
       - "14090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd4/quorum-node:/etc/quorum
@@ -56,7 +56,7 @@ services:
       - "15070:8070"
       - "15080:8080"
       - "15090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd5/quorum-node:/etc/quorum
@@ -68,7 +68,7 @@ services:
       - "16070:8070"
       - "16080:8080"
       - "16090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd6/quorum-node:/etc/quorum
@@ -80,7 +80,7 @@ services:
       - "17070:8070"
       - "17080:8080"
       - "17090:8090"
-    enviroment:
+    environment:
       - PRIVATE_CONFIG=/etc/constellation/constellation.conf
     volumes:
       - ./qdata/dd7/quorum-node:/etc/quorum      
